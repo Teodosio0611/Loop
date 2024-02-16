@@ -1,0 +1,7 @@
+cmake_minimun_required(VERSION 3.8)
+set(PORJECT_NAME "loop")
+project(${PORJECT_NAME})
+
+add_library(event_loop SHARED event_loop.cpp event.cpp)
+add_executable(main main.cpp)
+target_link_library(event_loop)
